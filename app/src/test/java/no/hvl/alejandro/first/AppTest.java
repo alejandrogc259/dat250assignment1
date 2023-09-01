@@ -3,12 +3,18 @@
  */
 package no.hvl.alejandro.first;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @BeforeAll static void initializeApp(){
+        App test = new App();
+    }
+    @Test void convertingRight(){
+        assertEquals(App.convert(2,"ft","m"), 0.6096);
+    }
+    @Test void failedTest(){
+        assertEquals(App.convert(2,"ft","m"), 0.6196);
     }
 }
