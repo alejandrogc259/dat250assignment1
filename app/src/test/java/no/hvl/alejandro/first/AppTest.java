@@ -14,7 +14,8 @@ class AppTest {
     @Test void convertingRight(){
         assertEquals(App.convert(2,"ft","m"), 0.6096);
     }
-    @Test void failedTest(){
+    /* @Test void failedTest(){
         assertEquals(App.convert(2,"ft","m"), 0.6196);
     }
+     */
 }
